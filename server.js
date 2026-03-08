@@ -58,7 +58,7 @@ app.get("/health", (req, res) => {
   res.json({
     status: "ok",
     service: "TruVy KYC API",
-    version: "2.0.0-demo",
+    version: "2.1.0-agefix",
     endpoints: [
       "POST /issue",
       "POST /issue-from-document",
