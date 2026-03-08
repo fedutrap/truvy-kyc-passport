@@ -101,8 +101,8 @@ test("POST /verify accepts a valid credential and returns only safe claims", asy
 
   // Confirm withheld list is present
   assert.ok(
-    verifyRes.body.withheld.includes("passportNumber"),
-    "withheld list should include passportNumber"
+    verifyRes.body.withheld.includes("documentNumber"),
+    "withheld list should include documentNumber"
   );
 });
 
