@@ -10,9 +10,9 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: "10mb" }));
+app.use(express.json({ limit: "10mb" }))
 
-// ─── RSA Key Generation ───────────────────────────────────────────────────────
+// ─── RSA Key Generation ──────────────────────────────────────────────────────
 const { privateKey, publicKey } = generateKeyPairSync("rsa", {
   modulusLength: 2048,
   publicKeyEncoding: { type: "spki", format: "pem" },
@@ -58,7 +58,7 @@ app.get("/health", (req, res) => {
   res.json({
     status: "ok",
     service: "TruVy KYC API",
-    version: "2.1.0-agefix",
+        version: "2.2.0",
     endpoints: [
       "POST /issue",
       "POST /issue-from-document",
