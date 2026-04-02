@@ -75,7 +75,7 @@ app.get("/health", (req, res) => {
 // Standard credential issuance from manual form fields
 app.post("/issue", async (req, res) => {
   try {
-    const { name, country, documentType = "passport" } = req.body;
+    const { name, country, documentType = "driver's license" } = req.body;
 
     if (!name || !country) {
       return res.status(400).json({ error: "name and country are required" });
